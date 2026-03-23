@@ -1,5 +1,3 @@
-# customer-booking-prediction
-
 <div align="center">
 
 # ✈️ British Airways — Data Science Job Simulation
