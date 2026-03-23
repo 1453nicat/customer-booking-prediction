@@ -12,7 +12,7 @@
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-RandomForest-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
 [![Status](https://img.shields.io/badge/Status-Completed%20✓-2ecc71?style=for-the-badge)]()
-[![Certificate](https://img.shields.io/badge/Certificate-March%202026-00428a?style=for-the-badge)]()
+[![Certificate]([https://img.shields.io/badge/Certificate-March%202026-00428a?style=for-the-badge](https://www.theforage.com/completion-certificates/tMjbs76F526fF5v3G/NjynCWzGSaWXQCxSX_tMjbs76F526fF5v3G_699b43f63b2e4c13b63d62c9_1774201344641_completion_certificate.pdf))]()
 
 > **Completed as part of the British Airways Data Science Job Simulation on Forage** — March 22, 2026
 > Analysed customer review data and built a machine learning model to predict booking completion behaviour.
