@@ -1,7 +1,5 @@
 # customer-booking-prediction
 
-### Predicting customer booking completion using Random Forest.
----
 <div align="center">
 
 # ✈️ British Airways — Data Science Job Simulation
