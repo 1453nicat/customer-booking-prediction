@@ -1,10 +1,8 @@
 # customer-booking-prediction
 
-Predicting customer booking completion using Random Forest.
+### Predicting customer booking completion using Random Forest.
 ---
 <div align="center">
-
-    [British Airways]<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/f9b29cbc-8121-4182-a0bc-d504546adfb0" />
 
 # ✈️ British Airways — Data Science Job Simulation
 
@@ -22,13 +20,12 @@ Predicting customer booking completion using Random Forest.
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
-- [Tasks](#-tasks)
+- [Task](#-tasks)
 - [Dataset](#-dataset)
 - [Methodology](#-methodology)
 - [Feature Engineering](#-feature-engineering)
 - [Model & Evaluation](#-model--evaluation)
 - [Key Findings](#-key-findings)
-- [Project Structure](#-project-structure)
 - [Tech Stack](#-tech-stack)
 - [How to Run](#-how-to-run)
 - [Certificate](#-certificate)
@@ -37,19 +34,13 @@ Predicting customer booking completion using Random Forest.
 
 ## 🔍 Overview
 
-This project is part of the **British Airways Data Science Job Simulation** hosted on [Forage](https://www.theforage.com/). The simulation replicates the real-world data science workflows used at one of the world's leading airlines — from scraping and analysing customer sentiment data to building a predictive model that identifies which customers are most likely to complete a booking.
+This project is part of the **British Airways Data Science Job Simulation** hosted on [Forage](https://www.theforage.com/). The simulation replicates the real-world data science workflows used at one of the world's leading airlines from scraping and analysing customer sentiment data to building a predictive model that identifies which customers are most likely to complete a booking.
 
 The core business problem: **British Airways needs to understand what drives a customer to complete a booking**, enabling proactive, data-driven marketing and personalisation strategies before a customer even considers a competitor.
 
 ---
 
-## 🗂️ Tasks
-
-### Task 1 — Web Scraping & Sentiment Analysis
-- Scraped customer reviews from [Skytrax](https://www.airlinequality.com/airline-reviews/british-airways)
-- Cleaned and pre-processed unstructured text data
-- Performed sentiment analysis to uncover key themes in customer feedback
-- Summarised insights in an executive-ready PowerPoint slide
+## 🗂️ Task
 
 ### Task 2 — Predictive Modelling of Customer Bookings *(this repo)*
 - Explored and prepared the `customer_booking.csv` dataset (50,000 records)
@@ -93,7 +84,7 @@ The core business problem: **British Airways needs to understand what drives a c
 
 ## ⚙️ Methodology
 ```
-Raw Data → EDA → Feature Engineering → Encoding → Model Training → CV Evaluation → Interpretation
+Raw Data -> EDA -> Feature Engineering -> Encoding -> Model Training -> CV Evaluation -> Interpretation
 ```
 
 1. **Exploratory Data Analysis** — distribution plots by target, categorical booking rates, correlation heatmap
@@ -118,7 +109,7 @@ Raw Data → EDA → Feature Engineering → Encoding → Model Training → CV 
 | `is_weekend_flight` | `flight_day` ∈ {Fri, Sat, Sun} | Weekend travellers book differently |
 | `is_business_hours` | `flight_hour` between 8–18 | Business-hours bookings signal trip purpose |
 
-> `total_extras` ranked **7th out of 19 total features** — validating that customer intent signals captured through add-on selection genuinely contribute predictive power.
+> `total_extras` ranked **7th out of 19 total features**, validating that customer intent signals captured through add-on selection genuinely contribute predictive power.
 
 ---
 
@@ -127,12 +118,12 @@ Raw Data → EDA → Feature Engineering → Encoding → Model Training → CV 
 ### Model Configuration
 ```python
 RandomForestClassifier(
-    n_estimators     = 200,        # 200 decision trees
-    max_depth        = 10,         # Regularisation via depth limit
-    min_samples_leaf = 10,         # Minimum 10 samples per leaf
-    class_weight     = "balanced", # Compensates for 85/15 class imbalance
-    random_state     = 42,
-    n_jobs           = -1
+    n_estimators = 200, # 200 decision trees
+    max_depth = 10, # Regularisation via depth limit
+    min_samples_leaf = 10, # Minimum 10 samples per leaf
+    class_weight = "balanced", # Compensates for 85/15 class imbalance
+    random_state = 42,
+    n_jobs  = -1
 )
 ```
 
@@ -146,7 +137,7 @@ RandomForestClassifier(
 | Precision | 0.3340 | **0.2951** | ±0.0055 | ✅ Normal |
 | Recall | 0.7932 | **0.6951** | ±0.0104 | ✅ Normal |
 
-> No overfitting detected — all Train vs Validation gaps are within the acceptable threshold of < 0.10.
+> No overfitting detected, all Train vs Validation gaps are within the acceptable threshold of < 0.10.
 
 ### Top 10 Feature Importances
 
@@ -167,32 +158,15 @@ RandomForestClassifier(
 
 ## 💡 Key Findings
 
-- **`booking_origin` is the dominant predictor** (0.3617) — where a customer books from has the strongest influence on completion. This reflects cultural booking patterns, regional payment infrastructure, and BA route availability per market.
+- **`booking_origin` is the dominant predictor** (0.3617) where a customer books from has the strongest influence on completion. This reflects cultural booking patterns, regional payment infrastructure, and BA route availability per market.
 
-- **Flight characteristics outrank customer preferences** — `flight_duration`, `length_of_stay`, and `route` collectively outrank individual extras flags, suggesting trip structure is a stronger intent signal than add-on selection alone.
+- **Flight characteristics outrank customer preferences** `flight_duration`, `length_of_stay`, and `route` collectively outrank individual extras flags, suggesting trip structure is a stronger intent signal than add-on selection alone.
 
-- **Engineered `total_extras` ranked 7th of 19 features** — confirms feature engineering added genuine value. Customers selecting multiple extras show meaningfully higher booking completion.
+- **Engineered `total_extras` ranked 7th of 19 features** confirms feature engineering added genuine value. Customers selecting multiple extras show meaningfully higher booking completion.
 
-- **Internet channel converts at 15.5% vs Mobile at 10.8%** — channel type has a measurable impact on completion rate, pointing to UX or demographic differences between platforms.
+- **Internet channel converts at 15.5% vs Mobile at 10.8%** channel type has a measurable impact on completion rate, pointing to UX or demographic differences between platforms.
 
 - **ROC AUC of 0.764** indicates solid discriminative power for a real-world imbalanced problem. Enriching with features like loyalty tier, session duration, or device type could push this further.
-
----
-
-## 📁 Project Structure
-```
-british-airways-data-science/
-│
-├── 📓 Getting_Started.ipynb      # Full analysis notebook with outputs
-├── 📊 customer_booking.csv       # Dataset (50,000 records)
-├── 📄 BA_Results_Slide.pptx      # Executive summary slide
-│
-├── outputs/
-│   ├── feature_importance.png    # Feature importance bar chart
-│   └── confusion_matrix.png      # Confusion matrix (test set)
-│
-└── README.md
-```
 
 ---
 
@@ -223,7 +197,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn jupyter
 
 **3. Launch the notebook**
 ```bash
-jupyter notebook Getting_Started.ipynb
+jupyter notebook Customer_bookings.ipynb
 ```
 
 > **Google Colab users:** Upload `customer_booking.csv` to `/content/` and run all cells.
@@ -232,7 +206,7 @@ jupyter notebook Getting_Started.ipynb
 
 ## 🏆 Certificate
 
-**British Airways Data Science Job Simulation** — Forage  
+[**British Airways Data Science Job Simulation** — Forage](https://www.theforage.com/completion-certificates/tMjbs76F526fF5v3G/NjynCWzGSaWXQCxSX_tMjbs76F526fF5v3G_699b43f63b2e4c13b63d62c9_1774201344641_completion_certificate.pdf)  
 📅 Completed: **March 22, 2026**
 
 **Skills demonstrated:**
