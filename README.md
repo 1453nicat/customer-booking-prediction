@@ -1,6 +1,11 @@
 # customer-booking-prediction
+
+Predicting customer booking completion using Random Forest.
+---
 <div align="center">
-    
+
+    <img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/f9b29cbc-8121-4182-a0bc-d504546adfb0" />
+
 # ✈️ British Airways — Data Science Job Simulation
 
 [![Forage](https://img.shields.io/badge/Forage-British%20Airways-00428a?style=for-the-badge)](https://www.theforage.com/)
