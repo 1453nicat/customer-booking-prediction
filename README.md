@@ -3,7 +3,7 @@
 
 <div align="center">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/British_Airways_Logo.svg/320px-British_Airways_Logo.svg.png" width="180" alt="British Airways Logo" />
+<img src="https://logos-world.net/british-airways-logo/" width="180" alt="British Airways Logo" />
 
 # ✈️ British Airways — Data Science Job Simulation
 
