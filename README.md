@@ -4,7 +4,7 @@ Predicting customer booking completion using Random Forest.
 ---
 <div align="center">
 
-    <img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/f9b29cbc-8121-4182-a0bc-d504546adfb0" />
+    [British Airways]<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/f9b29cbc-8121-4182-a0bc-d504546adfb0" />
 
 # ✈️ British Airways — Data Science Job Simulation
 
