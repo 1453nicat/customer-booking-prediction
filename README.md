@@ -18,7 +18,6 @@
 - [Overview](#-overview)
 - [Task](#-tasks)
 - [Dataset](#-dataset)
-- [Methodology](#-methodology)
 - [Feature Engineering](#-feature-engineering)
 - [Model & Evaluation](#-model--evaluation)
 - [Key Findings](#-key-findings)
@@ -30,15 +29,13 @@
 
 ## 🔍 Overview
 
-This project is part of the **British Airways Data Science Job Simulation** hosted on [Forage](https://www.theforage.com/). The simulation replicates the real-world data science workflows used at one of the world's leading airlines from scraping and analysing customer sentiment data to building a predictive model that identifies which customers are most likely to complete a booking.
-
-The core business problem: **British Airways needs to understand what drives a customer to complete a booking**, enabling proactive, data-driven marketing and personalisation strategies before a customer even considers a competitor.
+This project is part of the **British Airways Data Science Job Simulation** hosted on [Forage](https://www.theforage.com/). The simulation replicates the real-world data science workflows used at one of the world's leading airlines from scraping and analysing customer sentiment data to building a predictive model that identifies which customers are most likely to complete a booking. Also, the core business problem: **British Airways needs to understand what drives a customer to complete a booking**, enabling proactive, data-driven marketing and personalisation strategies before a customer even considers a competitor.
 
 ---
 
 ## 🗂️ Task
 
-### Task 2 — Predictive Modelling of Customer Bookings *(this repo)*
+### Predictive Modelling of Customer Bookings
 - Explored and prepared the `customer_booking.csv` dataset (50,000 records)
 - Engineered 5 new features to enhance predictive power
 - Trained a **Random Forest Classifier** to predict booking completion
@@ -77,22 +74,6 @@ The core business problem: **British Airways needs to understand what drives a c
 | `booking_complete` | **Target** — 1 if booking was completed |
 
 ---
-
-## ⚙️ Methodology
-```
-Raw Data -> EDA -> Feature Engineering -> Encoding -> Model Training -> CV Evaluation -> Interpretation
-```
-
-1. **Exploratory Data Analysis** — distribution plots by target, categorical booking rates, correlation heatmap
-2. **Data Cleaning** — zero null values confirmed; `flight_day` mapped from string to numeric ordinal
-3. **Feature Engineering** — 5 new features constructed from domain logic
-4. **Encoding** — `LabelEncoder` applied to all categorical columns
-5. **Modelling** — `RandomForestClassifier` with class balancing
-6. **Evaluation** — 5-Fold Stratified Cross-Validation across 5 metrics
-7. **Interpretation** — Feature importance ranking and business recommendation
-
----
-
 ## 🛠️ Feature Engineering
 
 5 new features were constructed to give the model richer signals:
