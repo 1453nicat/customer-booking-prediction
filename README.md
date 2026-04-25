@@ -183,7 +183,7 @@ jupyter notebook Customer_bookings.ipynb
 
 ## 🏆 Certificate
 
-[**British Airways Data Science Job Simulation** — Forage](https://www.theforage.com/completion-certificates/tMjbs76F526fF5v3G/NjynCWzGSaWXQCxSX_tMjbs76F526fF5v3G_699b43f63b2e4c13b63d62c9_1774201344641_completion_certificate.pdf)  
+[**British Airways Data Science Job Simulation - Forage**](https://www.theforage.com/completion-certificates/tMjbs76F526fF5v3G/NjynCWzGSaWXQCxSX_tMjbs76F526fF5v3G_699b43f63b2e4c13b63d62c9_1774201344641_completion_certificate.pdf)  
 📅 Completed: **March 22, 2026**
 
 **Skills demonstrated:**
